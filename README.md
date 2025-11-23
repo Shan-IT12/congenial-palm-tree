@@ -29,6 +29,20 @@ People use GitHub to build some of the most advanced technologies in the world. 
 - **Prerequisites**: None. This course is a great introduction for your first day on GitHub.
 - **How long**: This course takes less than one hour to complete.
 
+### 🌐 Interactive Website Walkthrough
+
+This course now includes an **interactive website** that provides a modern, user-friendly walkthrough experience! 
+
+**View the interactive walkthrough:** Open `index.html` in your browser or visit the GitHub Pages deployment (once enabled in repository settings).
+
+**Features:**
+- 🎯 Step-by-step guided navigation
+- 📊 Progress tracking with visual indicators
+- ⌨️ Keyboard shortcuts for easy navigation (Arrow keys, Enter, Backspace)
+- 📱 Responsive design for all devices
+- ✨ Smooth animations and modern UI
+
+
 In this course, you will:
 
 1. Create a branch
