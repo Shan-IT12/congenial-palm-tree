@@ -38,7 +38,7 @@ This course now includes an **interactive website** that provides a modern, user
 **Features:**
 - 🎯 Step-by-step guided navigation
 - 📊 Progress tracking with visual indicators
-- ⌨️ Keyboard shortcuts for easy navigation (Arrow keys, Enter, Backspace)
+- ⌨️ Keyboard shortcuts for easy navigation (Arrow keys, Enter)
 - 📱 Responsive design for all devices
 - ✨ Smooth animations and modern UI
 

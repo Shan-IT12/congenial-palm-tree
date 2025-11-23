@@ -54,6 +54,8 @@ function updateProgress() {
     if (!progressContainer) {
         progressContainer = document.createElement('div');
         progressContainer.className = 'progress-indicator';
+        progressContainer.setAttribute('role', 'navigation');
+        progressContainer.setAttribute('aria-label', 'Course progress');
         
         const header = document.querySelector('header .container');
         if (header) {
@@ -68,17 +70,32 @@ function updateProgress() {
     for (let i = 0; i < totalSteps; i++) {
         const dot = document.createElement('div');
         dot.className = 'progress-dot';
+        dot.setAttribute('role', 'button');
+        dot.setAttribute('tabindex', '0');
+        dot.setAttribute('aria-label', `Go to step ${i + 1}`);
         
         if (i === currentStep) {
             dot.classList.add('active');
+            dot.setAttribute('aria-current', 'step');
         } else if (i < currentStep) {
             dot.classList.add('completed');
         }
         
+        // Click handler
         dot.onclick = () => {
             currentStep = i;
             showStep(i);
             saveProgress();
+        };
+        
+        // Keyboard handler for accessibility
+        dot.onkeydown = (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                currentStep = i;
+                showStep(i);
+                saveProgress();
+            }
         };
         
         progressContainer.appendChild(dot);
@@ -120,13 +137,17 @@ function scrollToTop() {
 
 // Keyboard navigation
 document.addEventListener('keydown', function(event) {
-    // Left arrow or backspace for previous
-    if ((event.key === 'ArrowLeft' || event.key === 'Backspace') && currentStep > 0) {
+    // Left arrow for previous
+    if (event.key === 'ArrowLeft' && currentStep > 0) {
         event.preventDefault();
         prevStep();
     }
     // Right arrow or enter for next
     else if ((event.key === 'ArrowRight' || event.key === 'Enter') && currentStep < totalSteps - 1) {
+        // Don't trigger on Enter if user is focused on a button or link
+        if (event.key === 'Enter' && (event.target.tagName === 'BUTTON' || event.target.tagName === 'A')) {
+            return;
+        }
         event.preventDefault();
         nextStep();
     }
@@ -147,5 +168,5 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Console easter egg
 console.log('%c🎉 Welcome to the GitHub Introduction Walkthrough!', 'font-size: 20px; color: #2da44e; font-weight: bold;');
-console.log('%cUse Arrow Keys or Enter/Backspace to navigate between steps!', 'font-size: 14px; color: #0969da;');
+console.log('%cUse Arrow Keys or Enter to navigate between steps!', 'font-size: 14px; color: #0969da;');
 console.log('%cHappy learning! 🚀', 'font-size: 14px; color: #1a7f37;');
