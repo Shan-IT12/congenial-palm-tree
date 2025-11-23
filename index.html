@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to GitHub - Interactive Walkthrough</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🚀 Introduction to GitHub</h1>
+            <p class="subtitle">Get started using GitHub in less than an hour</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="welcome" class="step-section active">
+            <h2>Welcome</h2>
+            <p>People use GitHub to build some of the most advanced technologies in the world. Whether you're visualizing data or building a new game, there's a whole community and set of tools on GitHub that can help you do it even better.</p>
+            
+            <div class="info-box">
+                <h3>What You'll Learn</h3>
+                <ul>
+                    <li><strong>Who is this for:</strong> New developers, new GitHub users, and students</li>
+                    <li><strong>What you'll learn:</strong> Repositories, branches, commits, and pull requests</li>
+                    <li><strong>What you'll build:</strong> A profile README for your GitHub profile</li>
+                    <li><strong>Prerequisites:</strong> None. This course is a great introduction for your first day on GitHub</li>
+                    <li><strong>How long:</strong> Less than one hour to complete</li>
+                </ul>
+            </div>
+
+            <h3>Course Steps</h3>
+            <ol class="step-list">
+                <li>Create a branch</li>
+                <li>Commit a file</li>
+                <li>Open a pull request</li>
+                <li>Merge your pull request</li>
+            </ol>
+
+            <button class="btn-primary" onclick="nextStep()">Start Course →</button>
+        </section>
+
+        <section id="step-1" class="step-section">
+            <h2>Step 1: Create a Branch</h2>
+            
+            <div class="info-box">
+                <h3>What is GitHub?</h3>
+                <p>GitHub is a collaboration platform that uses <strong>Git</strong> for versioning. GitHub is a popular place to share and contribute to open-source software.</p>
+                <p>📺 <a href="https://www.youtube.com/watch?v=pBy1zgt0XPc" target="_blank">Video: What is GitHub?</a></p>
+            </div>
+
+            <div class="info-box">
+                <h3>What is a repository?</h3>
+                <p>A <strong>repository</strong> is a project containing files and folders. A repository tracks versions of files and folders.</p>
+            </div>
+
+            <div class="info-box">
+                <h3>What is a branch?</h3>
+                <p>A <strong>branch</strong> is a parallel version of your repository. By default, your repository has one branch named <code>main</code> and it is considered to be the definitive branch. Creating additional branches allows you to copy the <code>main</code> branch and safely make changes without disrupting the main project.</p>
+            </div>
+
+            <div class="info-box">
+                <h3>What is a profile README?</h3>
+                <p>A <strong>profile README</strong> is essentially an "About me" section on your GitHub profile where you can share information about yourself with the community on GitHub.com.</p>
+                <img src="images/profile-readme-example.png" alt="Profile README example" class="screenshot">
+            </div>
+
+            <h3>⌨️ Activity: Your first branch</h3>
+            <ol class="activity-steps">
+                <li>Navigate to the <strong>&lt; &gt; Code</strong> tab in your repository
+                    <img src="images/code-tab.png" alt="Code tab" class="screenshot">
+                </li>
+                <li>Click on the <strong>main</strong> branch drop-down
+                    <img src="images/main-branch-dropdown.png" alt="Main branch dropdown" class="screenshot">
+                </li>
+                <li>In the field, name your branch <code>my-first-branch</code></li>
+                <li>Click <strong>Create branch: my-first-branch</strong>
+                    <img src="images/create-branch-button.png" alt="Create branch button" class="screenshot">
+                </li>
+                <li>Wait about 20 seconds then refresh your repository page. GitHub Actions will automatically update to the next step.</li>
+            </ol>
+
+            <div class="navigation-buttons">
+                <button class="btn-secondary" onclick="prevStep()">← Previous</button>
+                <button class="btn-primary" onclick="nextStep()">Next Step →</button>
+            </div>
+        </section>
+
+        <section id="step-2" class="step-section">
+            <h2>Step 2: Commit a File</h2>
+            
+            <p class="success-message">✅ You created a branch!</p>
+
+            <div class="info-box">
+                <h3>What is a commit?</h3>
+                <p>A <strong>commit</strong> is a set of changes to the files and folders in your project. A commit exists in a branch.</p>
+            </div>
+
+            <div class="note-box">
+                <p><strong>Note:</strong> <code>.md</code> is a file extension that creates a Markdown file. You can learn more about Markdown by visiting <a href="https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax" target="_blank">Basic writing and formatting syntax</a>.</p>
+            </div>
+
+            <h3>⌨️ Activity: Your first commit</h3>
+            <ol class="activity-steps">
+                <li>Make sure you're on your new branch <code>my-first-branch</code></li>
+                <li>Select the <strong>Add file</strong> drop-down and click <strong>Create new file</strong>
+                    <img src="images/create-new-file.png" alt="Create new file" class="screenshot">
+                </li>
+                <li>In the <strong>Name your file...</strong> field, enter <code>PROFILE.md</code></li>
+                <li>In the file contents area, copy the following:
+                    <div class="code-box">
+                        <code>Welcome to my GitHub profile!</code>
+                    </div>
+                    <img src="images/my-profile-file.png" alt="Profile file" class="screenshot">
+                </li>
+                <li>Click <strong>Commit changes...</strong> in the upper right corner</li>
+                <li>Enter <code>Add PROFILE.md</code> as the commit message
+                    <img src="images/commit-full-screen.png" alt="Commit screen" class="screenshot">
+                </li>
+                <li>Click <strong>Commit changes</strong></li>
+                <li>Wait about 20 seconds then refresh. GitHub Actions will automatically update to the next step.</li>
+            </ol>
+
+            <div class="navigation-buttons">
+                <button class="btn-secondary" onclick="prevStep()">← Previous</button>
+                <button class="btn-primary" onclick="nextStep()">Next Step →</button>
+            </div>
+        </section>
+
+        <section id="step-3" class="step-section">
+            <h2>Step 3: Open a Pull Request</h2>
+            
+            <p class="success-message">✨ Nice work making that commit!</p>
+
+            <div class="info-box">
+                <h3>What is a pull request?</h3>
+                <p>Collaboration happens on a <strong>pull request</strong>. The pull request shows the changes in your branch to other people and allows people to accept, reject, or suggest additional changes to your branch.</p>
+            </div>
+
+            <h3>⌨️ Activity: Create a pull request</h3>
+            <p>You may have noticed after your commit that a message displayed indicating your recent push to your branch with a <strong>Compare & pull request</strong> button.</p>
+            <img src="images/compare-and-pull-request.png" alt="Compare and pull request" class="screenshot">
+
+            <ol class="activity-steps">
+                <li>Click on the <strong>Pull requests</strong> tab in your repository</li>
+                <li>Click <strong>New pull request</strong></li>
+                <li>In the <strong>base:</strong> dropdown, make sure <strong>main</strong> is selected</li>
+                <li>Select the <strong>compare:</strong> dropdown, and click <code>my-first-branch</code>
+                    <img src="images/pull-request-branches.png" alt="Pull request branches" class="screenshot">
+                </li>
+                <li>Click <strong>Create pull request</strong></li>
+                <li>Enter a title: <code>Add my first file</code></li>
+                <li>Add a description of your changes
+                    <img src="images/Pull-request-description.png" alt="Pull request description" class="screenshot">
+                </li>
+                <li>Click <strong>Create pull request</strong></li>
+                <li>Wait about 20 seconds then refresh. GitHub Actions will automatically update to the next step.</li>
+            </ol>
+
+            <div class="note-box">
+                <p><strong>Note:</strong> You may see evidence of GitHub Actions running on your pull request!</p>
+                <img src="images/Actions-to-step-4.png" alt="Actions line" class="screenshot">
+            </div>
+
+            <div class="navigation-buttons">
+                <button class="btn-secondary" onclick="prevStep()">← Previous</button>
+                <button class="btn-primary" onclick="nextStep()">Next Step →</button>
+            </div>
+        </section>
+
+        <section id="step-4" class="step-section">
+            <h2>Step 4: Merge Your Pull Request</h2>
+            
+            <p class="success-message">😎 Nicely done!</p>
+
+            <div class="info-box">
+                <h3>What is a merge?</h3>
+                <p>A <strong>merge</strong> adds the changes in your pull request and branch into the <code>main</code> branch.</p>
+            </div>
+
+            <p>You'll have to wait for GitHub Actions to finish before you can merge your pull request. It will be ready when the merge pull request button is green.</p>
+            <img src="images/Green-merge-pull-request.png" alt="Green merge button" class="screenshot">
+
+            <h3>⌨️ Activity: Merge the pull request</h3>
+            <ol class="activity-steps">
+                <li>Click <strong>Merge pull request</strong></li>
+                <li>Click <strong>Confirm merge</strong></li>
+                <li>Once merged, click <strong>Delete branch</strong>
+                    <img src="images/delete-branch.png" alt="Delete branch" class="screenshot">
+                </li>
+                <li>Wait about 20 seconds then refresh. GitHub Actions will automatically update to the next step.</li>
+            </ol>
+
+            <div class="note-box">
+                <p><strong>Note:</strong> Check out the <strong>Finish</strong> step to see what you can learn next!</p>
+            </div>
+
+            <div class="navigation-buttons">
+                <button class="btn-secondary" onclick="prevStep()">← Previous</button>
+                <button class="btn-primary" onclick="nextStep()">Complete Course →</button>
+            </div>
+        </section>
+
+        <section id="finish" class="step-section">
+            <h2>🎉 Finish</h2>
+            
+            <p class="success-message">Congratulations, you've completed this course and joined the world of developers!</p>
+
+            <img src="https://octodex.github.com/images/collabocats.jpg" alt="Celebrate" class="celebration-image">
+
+            <h3>Here's a recap of your accomplishments:</h3>
+            <ul class="accomplishments">
+                <li>✅ You learned about GitHub, repositories, branches, commits, and pull requests</li>
+                <li>✅ You created a branch, a commit, and a pull request</li>
+                <li>✅ You merged a pull request</li>
+                <li>✅ You made your first contribution!</li>
+            </ul>
+
+            <h3>What's next?</h3>
+            <div class="info-box">
+                <h4>Make a Profile README</h4>
+                <ol>
+                    <li>Make a new public repository with a name that matches your GitHub username</li>
+                    <li>Create a file named <code>README.md</code> in its root</li>
+                    <li>Edit the contents of the <code>README.md</code> file</li>
+                    <li>If you created a new branch, open and merge a pull request</li>
+                    <li>Share your thoughts in the <a href="https://github.com/orgs/skills/discussions/categories/introduction-to-github" target="_blank">discussion board</a></li>
+                </ol>
+            </div>
+
+            <h3>Check out these resources:</h3>
+            <ul>
+                <li>📚 <a href="https://education.github.com/pack" target="_blank">Student Developer Pack</a></li>
+                <li>🎓 <a href="https://github.com/skills" target="_blank">Take another GitHub Skills course</a></li>
+                <li>📖 <a href="https://docs.github.com/en/get-started" target="_blank">GitHub Getting Started docs</a></li>
+                <li>🔍 <a href="https://github.com/explore" target="_blank">GitHub Explore</a></li>
+            </ul>
+
+            <div class="navigation-buttons">
+                <button class="btn-secondary" onclick="prevStep()">← Previous</button>
+                <button class="btn-primary" onclick="window.location.reload()">Start Over</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Get help: <a href="https://github.com/orgs/skills/discussions/categories/introduction-to-github" target="_blank">Discussion Board</a> • <a href="https://www.githubstatus.com/" target="_blank">GitHub Status</a></p>
+            <p>&copy; 2024 GitHub • <a href="https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md" target="_blank">Code of Conduct</a> • <a href="https://gh.io/mit" target="_blank">MIT License</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
